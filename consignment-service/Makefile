@@ -1,5 +1,5 @@
 build:
-	protoc -I. --go_out=plugins=grpc:. \
+	protoc -I. --go_out=plugins=micro:. \
 	  proto/consignment/consignment.proto
 	go build
 	docker build -t microservice-example .
