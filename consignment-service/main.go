@@ -9,7 +9,7 @@ import (
 
 	// Import the generated protobuf code
 	pb "github.com/bseto/microservice-example/consignment-service/proto/consignment"
-	vesselProto "github.com/bseto/microservice-example/vessel-service/shippy-service-vessel/proto/vessel"
+	vesselProto "github.com/bseto/microservice-example/vessel-service/proto/vessel"
 	"github.com/micro/go-micro"
 )
 

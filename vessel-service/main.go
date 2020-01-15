@@ -6,11 +6,11 @@ import (
 	"errors"
 	"fmt"
 
-	pb "github.com/EwanValentine/shippy/vessel-service/proto/vessel"
+	pb "github.com/bseto/microservice-example/vessel-service/proto/vessel"
 	"github.com/micro/go-micro"
 )
 
-type Repository interface {
+type repository interface {
 	FindAvailable(*pb.Specification) (*pb.Vessel, error)
 }
 
@@ -60,11 +60,10 @@ func main() {
 
 	srv.Init()
 
-	// Register our implementation with 
+	// Register our implementation with
 	pb.RegisterVesselServiceHandler(srv.Server(), &service{repo})
 
 	if err := srv.Run(); err != nil {
 		fmt.Println(err)
 	}
 }
-
